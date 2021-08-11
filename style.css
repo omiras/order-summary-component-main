@@ -1,0 +1,104 @@
+:root {
+    --primary: hsl(225, 100%, 94%);
+    --accent: hsl(245, 75%, 52%);
+    --neutral: hsl(225, 100%, 98%);
+    --desatured-neutral: hsl(224, 23%, 55%);
+    --dark-neutral: hsl(223, 47%, 23%);
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Red Hat Display', sans-serif;
+    font-size: 16px;
+    background-color: var(--primary);
+    background-image: url('./images/pattern-background-mobile.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.order {
+    width: clamp(350px, 100vw, 22em);
+    margin: 0 auto;
+    background-color: white;
+    border-radius: 1em;
+}
+
+.order__wrapper {
+    width: 90%;
+    margin: 0 auto;
+}
+
+.order__hero {
+    background-image: url('./images/illustration-hero.svg');
+    background-repeat: no-repeat;
+    background-position-x: -30px;
+    height: 220px;
+    border-top-right-radius: 1em;
+    border-top-left-radius: 1em;
+}
+
+.order__title {
+    text-align: center;
+    color: var(--dark-neutral);
+    margin-bottom: 0;
+}
+
+.order__description {
+    text-align: center;
+    color: var(--desatured-neutral);
+}
+
+.order__plan {
+    display: flex;
+    justify-content: space-around;
+    background-color: hsla(224, 23%, 55%, 0.1);
+    border: 1em;
+    align-items: center;
+    border-radius: 1em;
+    margin-top: 1em;
+}
+
+.plan__icon img {
+    vertical-align: middle;
+}
+
+.plan__conditions div:nth-of-type(1) {
+    font-weight: 700;
+}
+
+.plan__conditions div:nth-of-type(2) {
+    font-weight: 700;
+    color: var(--desatured-neutral);
+}
+
+.order__pay {
+    width: 100%;
+    text-align: center;
+    background-color: var(--accent);
+    color: white;
+    padding: 1em;
+    font-weight: 900;
+    border-radius: 1em;
+    margin-top: 2em;
+    cursor: pointer;
+}
+
+.order__cancel {
+    width: 100%;
+    text-align: center;
+    color: var(--desatured-neutral);
+    padding: 1em;
+    font-weight: 900;
+    border-radius: 1em;
+    cursor: pointer;
+    padding-bottom: 1em;
+}
+
+@media screen and (min-width: 1440px) {
+    body {
+        background-image: url('./images/pattern-background-desktop.svg');
+    }
+}
